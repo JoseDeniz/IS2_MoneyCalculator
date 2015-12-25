@@ -14,5 +14,6 @@
     <orderEntry type="library" name="Maven: org.wisdom-framework:sqlite-jdbc:3.8.7_1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.felix:org.apache.felix.ipojo.annotations:1.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.wisdom-framework:abstract-jdbc-driver:0.5" level="project" />
+    <orderEntry type="library" name="Maven: com.javaslang:javaslang:2.0.0-RC2" level="project" />
   </component>
 </module>

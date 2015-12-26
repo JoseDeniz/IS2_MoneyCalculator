@@ -1,33 +1,26 @@
 package moneycalculator.control;
 
-import moneycalculator.model.Currency;
-import moneycalculator.model.ExchangeRate;
 import moneycalculator.model.Money;
-import moneycalculator.view.persistence.ExchangeRateReader;
-import moneycalculator.view.ui.CurrencyDialog;
-import moneycalculator.view.ui.MoneyDialog;
-import moneycalculator.view.ui.MoneyDisplay;
+import moneycalculator.view.ui.ExchangeDialog;
 
 public class ExchangeCommand implements Command {
 
-    private final MoneyDialog moneyDialog;
-    private final CurrencyDialog currencyDialog;
-    private final ExchangeRateReader reader;
-    private final MoneyDisplay display;
+    private final ExchangeDialog exchangeDialog;
 
-    public ExchangeCommand(MoneyDialog moneyDialog, CurrencyDialog currencyDialog, ExchangeRateReader reader, MoneyDisplay display) {
-        this.moneyDialog = moneyDialog;
-        this.currencyDialog = currencyDialog;
-        this.reader = reader;
-        this.display = display;
+    public ExchangeCommand(ExchangeDialog exchangeDialog) {
+        this.exchangeDialog = exchangeDialog;
     }
 
     @Override
     public void execute() {
-        Money money = moneyDialog.getMoney();
-        Currency to = currencyDialog.getCurrency();
-        ExchangeRate exchangeRate = reader.read(new Currency("EUR", "Euro", "€"), to);
-        display.display(money);
+        if (isInputCorrect()) {
+            Money money = exchangeDialog.getMoney();
+            exchangeDialog.setResultText(String.format("%.5f\n%s", money.getAmount(), money.getCurrency()));
+        }
+        else exchangeDialog.setResultText("Incorrect input!");
     }
 
+    private boolean isInputCorrect() {
+        return exchangeDialog.getContent().getText().matches("\\d+[\\.,]?\\d+");
+    }
 }

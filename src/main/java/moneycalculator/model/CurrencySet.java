@@ -11,12 +11,8 @@ public class CurrencySet {
         list = new ArrayList<>();
     }
 
-    public boolean add(Currency currency) {
-        return list.add(currency);
-    }
-
-    public Currency get(int index) {
-        return list.get(index);
+    public void add(Currency currency) {
+        list.add(currency);
     }
 
     public Currency[] toArray() {

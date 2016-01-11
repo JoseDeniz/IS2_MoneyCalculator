@@ -1,4 +1,4 @@
-package moneycalculator.view.persistence.helper;
+package moneycalculator.application.persistence.helper;
 
 import javaslang.control.Try;
 

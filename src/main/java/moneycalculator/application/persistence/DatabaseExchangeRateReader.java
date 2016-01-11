@@ -1,14 +1,15 @@
-package moneycalculator.view.persistence;
+package moneycalculator.application.persistence;
 
 import moneycalculator.model.Currency;
 import moneycalculator.model.ExchangeRate;
+import moneycalculator.view.persistence.ExchangeRateReader;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static moneycalculator.view.persistence.helper.DatabaseConnector.tryConnection;
+import static moneycalculator.application.persistence.helper.DatabaseConnector.tryConnection;
 
 public class DatabaseExchangeRateReader implements ExchangeRateReader {
 

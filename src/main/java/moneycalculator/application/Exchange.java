@@ -1,6 +1,9 @@
-package moneycalculator.model;
+package moneycalculator.application;
 
-import moneycalculator.view.persistence.DatabaseExchangeRateReader;
+import moneycalculator.application.persistence.DatabaseExchangeRateReader;
+import moneycalculator.model.Currency;
+import moneycalculator.model.ExchangeRate;
+import moneycalculator.model.Money;
 
 public class Exchange {
 

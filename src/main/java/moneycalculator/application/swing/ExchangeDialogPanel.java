@@ -1,7 +1,7 @@
 package moneycalculator.application.swing;
 
+import moneycalculator.application.Exchange;
 import moneycalculator.model.Currency;
-import moneycalculator.model.Exchange;
 import moneycalculator.model.Money;
 import moneycalculator.view.ui.ExchangeDialog;
 

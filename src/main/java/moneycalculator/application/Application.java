@@ -1,8 +1,8 @@
 package moneycalculator.application;
 
+import moneycalculator.application.persistence.DatabaseCurrencySetLoader;
 import moneycalculator.application.swing.ApplicationFrame;
 import moneycalculator.model.CurrencySet;
-import moneycalculator.view.persistence.DatabaseCurrencySetLoader;
 
 public class Application {
 

@@ -21,6 +21,6 @@ public class ExchangeCommand implements Command {
     }
 
     private boolean isInputCorrect() {
-        return exchangeDialog.getContent().getText().matches("\\d?[\\.,]?\\d+");
+        return exchangeDialog.getContent().getText().matches("\\d+([\\.,]?\\d+)?");
     }
 }
